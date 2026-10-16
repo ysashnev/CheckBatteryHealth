@@ -21,6 +21,16 @@ struct BatteryReading: Equatable {
     var isCharging: Bool { (current ?? 0) > Self.idleThreshold }
     var isDischarging: Bool { (current ?? 0) < -Self.idleThreshold }
 
+    enum Mode {
+        case charging, discharging, idle
+    }
+
+    var mode: Mode {
+        if isCharging { return .charging }
+        if isDischarging { return .discharging }
+        return .idle
+    }
+
     var power: Double? {
         guard let voltage, let current else { return nil }
         return voltage * current
