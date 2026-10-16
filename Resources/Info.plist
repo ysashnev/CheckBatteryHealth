@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>uk</string>
+    <key>CFBundleExecutable</key>
+    <string>CheckBatteryHealth</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.ysashnev.CheckBatteryHealth</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>CheckBatteryHealth</string>
+    <key>CFBundleDisplayName</key>
+    <string>Check Battery Health</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>Потрібен доступ до Bluetooth, щоб читати стан LiFePO4-акумулятора з його BMS.</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+</dict>
+</plist>

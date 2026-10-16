@@ -1,0 +1,20 @@
+name: Build macOS app
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build app bundle
+        run: UNIVERSAL=1 ./scripts/build_app.sh
+      - name: Zip
+        run: ditto -c -k --keepParent build/CheckBatteryHealth.app build/CheckBatteryHealth.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CheckBatteryHealth
+          path: build/CheckBatteryHealth.zip
